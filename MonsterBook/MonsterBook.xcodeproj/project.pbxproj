@@ -19,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		08F242E6DBA5C774D5AEB346 /* Pods-MonsterBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsterBook.debug.xcconfig"; path = "Target Support Files/Pods-MonsterBook/Pods-MonsterBook.debug.xcconfig"; sourceTree = "<group>"; };
+		1833252D24C98ECE000DCD22 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18E0716F24C6F208002D563D /* MonsterBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsterBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E0717224C6F208002D563D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E0717324C6F208002D563D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,9 +48,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1833252924C98E04000DCD22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1833252A24C98E11000DCD22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1833252B24C98E19000DCD22 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1833252C24C98E35000DCD22 /* Handle */ = {
+			isa = PBXGroup;
+			children = (
+				1833252B24C98E19000DCD22 /* Controller */,
+				1833252A24C98E11000DCD22 /* View */,
+				1833252924C98E04000DCD22 /* Model */,
+			);
+			path = Handle;
+			sourceTree = "<group>";
+		};
 		18E0716624C6F208002D563D = {
 			isa = PBXGroup;
 			children = (
+				1833252C24C98E35000DCD22 /* Handle */,
 				18E0717124C6F208002D563D /* MonsterBook */,
 				18E0717024C6F208002D563D /* Products */,
 				858C7B6ECACF1F8BBD3C10DB /* Pods */,
@@ -79,6 +112,7 @@
 				18E0718024C6F20A002D563D /* LaunchScreen.storyboard */,
 				18E0718324C6F20A002D563D /* Info.plist */,
 				18E0718424C6F20A002D563D /* main.m */,
+				1833252D24C98ECE000DCD22 /* PrefixHeader.pch */,
 			);
 			path = MonsterBook;
 			sourceTree = "<group>";
@@ -97,7 +131,6 @@
 				08F242E6DBA5C774D5AEB346 /* Pods-MonsterBook.debug.xcconfig */,
 				87759F0FFAAE766AFE4DF998 /* Pods-MonsterBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
