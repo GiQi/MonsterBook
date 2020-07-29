@@ -14,6 +14,7 @@
 		18E0717F24C6F20A002D563D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E0717E24C6F20A002D563D /* Assets.xcassets */; };
 		18E0718224C6F20A002D563D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E0718024C6F20A002D563D /* LaunchScreen.storyboard */; };
 		18E0718524C6F20A002D563D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0718424C6F20A002D563D /* main.m */; };
+		18E5D8A524CEC5450077DEB9 /* MIBTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E5D8A324CEC5450077DEB9 /* MIBTabBarItem.m */; };
 		B20796B1227D7FA6DC0E1141 /* Pods_MonsterBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497603916F64E94BA3729B56 /* Pods_MonsterBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,8 @@
 		18E0718124C6F20A002D563D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18E0718324C6F20A002D563D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E0718424C6F20A002D563D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18E5D8A324CEC5450077DEB9 /* MIBTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBTabBarItem.m; sourceTree = "<group>"; };
+		18E5D8A424CEC5450077DEB9 /* MIBTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBTabBarItem.h; sourceTree = "<group>"; };
 		497603916F64E94BA3729B56 /* Pods_MonsterBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MonsterBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87759F0FFAAE766AFE4DF998 /* Pods-MonsterBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsterBook.release.xcconfig"; path = "Target Support Files/Pods-MonsterBook/Pods-MonsterBook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +71,7 @@
 		18E0717124C6F208002D563D /* MonsterBook */ = {
 			isa = PBXGroup;
 			children = (
+				18E5D89F24CEC5220077DEB9 /* Handle */,
 				18E0717224C6F208002D563D /* AppDelegate.h */,
 				18E0717324C6F208002D563D /* AppDelegate.m */,
 				18E0717524C6F208002D563D /* SceneDelegate.h */,
@@ -81,6 +85,39 @@
 				18E0718424C6F20A002D563D /* main.m */,
 			);
 			path = MonsterBook;
+			sourceTree = "<group>";
+		};
+		18E5D89F24CEC5220077DEB9 /* Handle */ = {
+			isa = PBXGroup;
+			children = (
+				18E5D8A224CEC5450077DEB9 /* Controller */,
+				18E5D8A024CEC5220077DEB9 /* Model */,
+				18E5D8A124CEC5220077DEB9 /* View */,
+			);
+			path = Handle;
+			sourceTree = SOURCE_ROOT;
+		};
+		18E5D8A024CEC5220077DEB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18E5D8A124CEC5220077DEB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18E5D8A224CEC5450077DEB9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18E5D8A324CEC5450077DEB9 /* MIBTabBarItem.m */,
+				18E5D8A424CEC5450077DEB9 /* MIBTabBarItem.h */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		2B4AAC43E6FED1CC6B1D3576 /* Frameworks */ = {
@@ -97,7 +134,6 @@
 				08F242E6DBA5C774D5AEB346 /* Pods-MonsterBook.debug.xcconfig */,
 				87759F0FFAAE766AFE4DF998 /* Pods-MonsterBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -197,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E5D8A524CEC5450077DEB9 /* MIBTabBarItem.m in Sources */,
 				18E0717A24C6F208002D563D /* ViewController.m in Sources */,
 				18E0717424C6F208002D563D /* AppDelegate.m in Sources */,
 				18E0718524C6F20A002D563D /* main.m in Sources */,
@@ -342,7 +379,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZQA28SEBC;
 				INFOPLIST_FILE = MonsterBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -359,7 +398,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZQA28SEBC;
 				INFOPLIST_FILE = MonsterBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
