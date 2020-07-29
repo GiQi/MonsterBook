@@ -17,10 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
-    lab.text = @"11111";
-    lab.backgroundColor = [UIColor redColor];
-    [self.view addSubview:lab];
+//    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
+//    lab.text = @"11111";
+//    lab.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:lab];
     
 }
 
