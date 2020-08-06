@@ -1,8 +1,8 @@
 //
-//  MIBTabBarItem.h
+//  MIBPublicButton.h
 //  MonsterBook
 //
-//  Created by Apple on 2020/7/24.
+//  Created by Apple on 2020/7/30.
 //  Copyright © 2020 Apple. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MIBTabBarItem : UITabBar
+@interface MIBPublishButton : UIButton
 
 @end
 

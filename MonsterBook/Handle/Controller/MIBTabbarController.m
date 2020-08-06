@@ -8,6 +8,7 @@
 
 #import "MIBTabbarController.h"
 #import "MIBHomeViewController.h"
+#import "MIBTabBarItem.h"
 
 @interface MIBTabbarController ()
 
@@ -92,6 +93,7 @@ static MIBTabbarController *_instance = NULL;
         //2.设置代理
 //        tabbarVC.delegate = self;
         tabbarVC.selectedIndex = 0;
+    
         [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                               [UIColor grayColor], NSForegroundColorAttributeName,
                                                             nil] forState:UIControlStateSelected|UIControlStateNormal];
@@ -124,6 +126,7 @@ static MIBTabbarController *_instance = NULL;
     _homeVC = [[MIBHomeViewController alloc] init];
     return _homeVC;
 }
+
 /*
 #pragma mark - Navigation
 

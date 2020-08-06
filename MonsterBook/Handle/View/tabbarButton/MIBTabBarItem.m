@@ -7,6 +7,10 @@
 //
 
 #import "MIBTabBarItem.h"
+#import "MIBPublishButton.h"
+@interface MIBTabBarItem()
+@property(nonatomic,strong)MIBPublishButton *publishButton;
+@end
 
 @implementation MIBTabBarItem
 
@@ -42,8 +46,17 @@
         buttonIndex++;
     }
     /**** 设置中间的发布按钮的frame ****/
-//    self.publishButton.frame = CGRectMake(0, 0, buttonW, buttonH);
-//    self.publishButton.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
+    self.publishButton.frame = CGRectMake(0, 0, buttonW, buttonH);
+    self.publishButton.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
+}
+
+- (MIBPublishButton *)publishButton
+{
+    if (_publishButton) {
+        return _publishButton;
+    }
+    _publishButton = [[MIBPublishButton alloc] init];
+    return _publishButton;
 }
 
 @end

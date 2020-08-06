@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1858F7C624D1656000131476 /* MIBTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858F7C524D1656000131476 /* MIBTabbarController.m */; };
 		1858F7C924D1728100131476 /* MIBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858F7C824D1728100131476 /* MIBHomeViewController.m */; };
+		186A830324DBDB31007A1C95 /* MIBBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 186A830224DBDB31007A1C95 /* MIBBackButton.m */; };
 		18E0717424C6F208002D563D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0717324C6F208002D563D /* AppDelegate.m */; };
 		18E0717724C6F208002D563D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0717624C6F208002D563D /* SceneDelegate.m */; };
 		18E0717A24C6F208002D563D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0717924C6F208002D563D /* ViewController.m */; };
@@ -17,6 +18,8 @@
 		18E0718224C6F20A002D563D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E0718024C6F20A002D563D /* LaunchScreen.storyboard */; };
 		18E0718524C6F20A002D563D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0718424C6F20A002D563D /* main.m */; };
 		18E5D8A524CEC5450077DEB9 /* MIBTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E5D8A324CEC5450077DEB9 /* MIBTabBarItem.m */; };
+		18F6647024D2747C00C48892 /* MIBPublishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F6646F24D2747C00C48892 /* MIBPublishButton.m */; };
+		18F6647324D29F1600C48892 /* MIBHomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F6647224D29F1600C48892 /* MIBHomeNavigationController.m */; };
 		B20796B1227D7FA6DC0E1141 /* Pods_MonsterBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497603916F64E94BA3729B56 /* Pods_MonsterBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,8 @@
 		1858F7C524D1656000131476 /* MIBTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBTabbarController.m; sourceTree = "<group>"; };
 		1858F7C724D1728100131476 /* MIBHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBHomeViewController.h; sourceTree = "<group>"; };
 		1858F7C824D1728100131476 /* MIBHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBHomeViewController.m; sourceTree = "<group>"; };
+		186A830124DBDB31007A1C95 /* MIBBackButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBBackButton.h; sourceTree = "<group>"; };
+		186A830224DBDB31007A1C95 /* MIBBackButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBBackButton.m; sourceTree = "<group>"; };
 		18E0716F24C6F208002D563D /* MonsterBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsterBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E0717224C6F208002D563D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E0717324C6F208002D563D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -41,6 +46,10 @@
 		18E0718424C6F20A002D563D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18E5D8A324CEC5450077DEB9 /* MIBTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBTabBarItem.m; sourceTree = "<group>"; };
 		18E5D8A424CEC5450077DEB9 /* MIBTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBTabBarItem.h; sourceTree = "<group>"; };
+		18F6646E24D2747C00C48892 /* MIBPublishButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBPublishButton.h; sourceTree = "<group>"; };
+		18F6646F24D2747C00C48892 /* MIBPublishButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBPublishButton.m; sourceTree = "<group>"; };
+		18F6647124D29F1600C48892 /* MIBHomeNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBHomeNavigationController.h; sourceTree = "<group>"; };
+		18F6647224D29F1600C48892 /* MIBHomeNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBHomeNavigationController.m; sourceTree = "<group>"; };
 		497603916F64E94BA3729B56 /* Pods_MonsterBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MonsterBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87759F0FFAAE766AFE4DF998 /* Pods-MonsterBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsterBook.release.xcconfig"; path = "Target Support Files/Pods-MonsterBook/Pods-MonsterBook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +124,7 @@
 		18E5D8A124CEC5220077DEB9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18F6646D24D2742200C48892 /* tabbarButton */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,14 +132,27 @@
 		18E5D8A224CEC5450077DEB9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				18E5D8A324CEC5450077DEB9 /* MIBTabBarItem.m */,
-				18E5D8A424CEC5450077DEB9 /* MIBTabBarItem.h */,
 				1858F7C424D1656000131476 /* MIBTabbarController.h */,
 				1858F7C524D1656000131476 /* MIBTabbarController.m */,
 				1858F7C724D1728100131476 /* MIBHomeViewController.h */,
 				1858F7C824D1728100131476 /* MIBHomeViewController.m */,
+				18F6647124D29F1600C48892 /* MIBHomeNavigationController.h */,
+				18F6647224D29F1600C48892 /* MIBHomeNavigationController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		18F6646D24D2742200C48892 /* tabbarButton */ = {
+			isa = PBXGroup;
+			children = (
+				18E5D8A324CEC5450077DEB9 /* MIBTabBarItem.m */,
+				18E5D8A424CEC5450077DEB9 /* MIBTabBarItem.h */,
+				18F6646E24D2747C00C48892 /* MIBPublishButton.h */,
+				18F6646F24D2747C00C48892 /* MIBPublishButton.m */,
+				186A830124DBDB31007A1C95 /* MIBBackButton.h */,
+				186A830224DBDB31007A1C95 /* MIBBackButton.m */,
+			);
+			path = tabbarButton;
 			sourceTree = "<group>";
 		};
 		2B4AAC43E6FED1CC6B1D3576 /* Frameworks */ = {
@@ -245,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F6647324D29F1600C48892 /* MIBHomeNavigationController.m in Sources */,
 				18E5D8A524CEC5450077DEB9 /* MIBTabBarItem.m in Sources */,
 				18E0717A24C6F208002D563D /* ViewController.m in Sources */,
 				18E0717424C6F208002D563D /* AppDelegate.m in Sources */,
@@ -252,6 +276,8 @@
 				18E0718524C6F20A002D563D /* main.m in Sources */,
 				1858F7C624D1656000131476 /* MIBTabbarController.m in Sources */,
 				18E0717724C6F208002D563D /* SceneDelegate.m in Sources */,
+				18F6647024D2747C00C48892 /* MIBPublishButton.m in Sources */,
+				186A830324DBDB31007A1C95 /* MIBBackButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
