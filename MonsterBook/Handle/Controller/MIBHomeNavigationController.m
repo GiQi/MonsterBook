@@ -32,11 +32,15 @@
 - (MIBBackButton *)backButton
 {
     if (_backButton == nil) {
-        _backButton = [_backButton initWithFrame:CGRectMake(0, 0, 30, 30)];
+        _backButton = [MIBBackButton setBackButtonWithTarget:self action:@selector(backButtonClick)];
     }
     return _backButton;
 }
 
+-(void)backButtonClick
+{
+    [self popoverPresentationController];
+}
 /*
 #pragma mark - Navigation
 

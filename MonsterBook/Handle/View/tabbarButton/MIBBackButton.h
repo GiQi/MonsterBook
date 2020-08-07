@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MIBBackButton : UIButton
 
++(instancetype)setBackButtonWithTarget:(id)target action:(SEL)action;
 @end
 
 NS_ASSUME_NONNULL_END

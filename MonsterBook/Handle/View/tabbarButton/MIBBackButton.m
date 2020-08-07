@@ -23,8 +23,20 @@
     if (self) {
         [self setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
         [self setImage:[UIImage imageNamed:@"back_click"] forState:UIControlStateHighlighted];
+        [self sizeToFit];
     }
     return self;
+}
+
++(instancetype)setBackButtonWithTarget:(id)target action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [button setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"back_click"] forState:UIControlStateHighlighted];
+    [button sizeToFit];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return button;
 }
 
 @end

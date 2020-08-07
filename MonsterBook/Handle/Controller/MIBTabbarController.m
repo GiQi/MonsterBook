@@ -21,6 +21,7 @@ static MIBTabbarController *_instance = NULL;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 +(instancetype)shareInstance
@@ -52,10 +53,10 @@ static MIBTabbarController *_instance = NULL;
         
         // 设置窗口的跟控制器
         UITabBarController * tabbarVC = [[UITabBarController alloc]init];
-
         // 添加子控制器
 //        UIViewController * homeVC = [[UIViewController alloc]init];
-        
+        MIBTabBarItem *tabbar = [[MIBTabBarItem alloc] init];
+        [tabbarVC setValue:tabbar forKeyPath:@"tabBar"];
         // 设置标题
         // 设置默认图片
         // 设置选中图片
@@ -110,7 +111,6 @@ static MIBTabbarController *_instance = NULL;
     vc.navigationItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:img];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImg];
-//    [self addChildViewController:vc];
 }
 
 -(void)setNavBarVC:(UINavigationController*)nav

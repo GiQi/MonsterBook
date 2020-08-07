@@ -48,6 +48,9 @@
     /**** 设置中间的发布按钮的frame ****/
     self.publishButton.frame = CGRectMake(0, 0, buttonW, buttonH);
     self.publishButton.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
+    self.publishButton.backgroundColor = [UIColor redColor];
+//    [self.publishButton setImage:[UIImage imageNamed:@"morebg"] forState:UIControlStateNormal];
+    [self addSubview:self.publishButton];
 }
 
 - (MIBPublishButton *)publishButton

@@ -17,11 +17,16 @@
     // Drawing code
 }
 */
+-(void)layoutSubviews
+{
+    [self setImage:[UIImage imageNamed:@"添加图片.png"] forState:UIControlStateNormal];
+}
+
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setImage:[UIImage imageNamed:@"中间加号"] forState:UIControlStateNormal];
+        [self setImage:[UIImage imageNamed:@"add"] forState:UIControlStateNormal];
     }
     return self;
 }
