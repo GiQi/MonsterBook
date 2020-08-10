@@ -8,11 +8,13 @@
 
 #import "MIBTabbarController.h"
 #import "MIBHomeViewController.h"
+#import "MIBHomeNavigationController.h"
 #import "MIBTabBarItem.h"
 
 @interface MIBTabbarController ()
 
 @property(nonatomic,strong)MIBHomeViewController *homeVC;
+@property(nonatomic,strong)MIBHomeNavigationController *homeNav;
 
 @end
 static MIBTabbarController *_instance = NULL;
@@ -60,11 +62,12 @@ static MIBTabbarController *_instance = NULL;
         // 设置标题
         // 设置默认图片
         // 设置选中图片
-    [self addChildrenVC:self.homeVC title:@"首页" image:@"news_Unselected" selectImage:@"news"];
-        self.view.backgroundColor = [UIColor yellowColor];
-        UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:self.homeVC];
-         homeNav.navigationBar.translucent = NO;
-        homeNav.navigationBar.backgroundColor = [UIColor blueColor];
+//    [self addChildrenVC:self.homeVC title:@"首页" image:@"news_Unselected" selectImage:@"news"];
+//        self.view.backgroundColor = [UIColor yellowColor];
+        _homeNav = [[MIBHomeNavigationController alloc] initWithRootViewController:self.homeVC];
+//       _homeNav = [MIBHomeNavigationController shareInstance];
+//         _homeNav.navigationBar.translucent = NO;
+//        _homeNav.navigationBar.backgroundColor = [UIColor blueColor];
 
         UIViewController * workVC = [[UIViewController alloc]init];
         [self addChildrenVC:workVC title:@"新帖" image:@"动态未选中" selectImage:@"动态选中"];
@@ -86,7 +89,7 @@ static MIBTabbarController *_instance = NULL;
         UINavigationController *meNav = [[UINavigationController alloc] initWithRootViewController:meVC];
         meNav.navigationBar.translucent = NO;
 
-        NSArray *VCArray = [NSArray arrayWithObjects:homeNav,workNav,messageNav,meNav, nil];
+    NSArray *VCArray = [NSArray arrayWithObjects:self.homeNav,workNav,messageNav,meNav, nil];
         tabbarVC.viewControllers = VCArray;
         
 //        tabbarVC.tabBar.barTintColor = [UIColor redColor];
@@ -118,14 +121,6 @@ static MIBTabbarController *_instance = NULL;
     
 }
 
--(MIBHomeViewController *)homeVC
-{
-    if (_homeVC) {
-        return _homeVC;
-    }
-    _homeVC = [[MIBHomeViewController alloc] init];
-    return _homeVC;
-}
 
 /*
 #pragma mark - Navigation

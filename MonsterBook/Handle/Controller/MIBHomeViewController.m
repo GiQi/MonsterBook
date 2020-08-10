@@ -21,6 +21,19 @@
     
 }
 
+-(void)viewWillLayoutSubviews
+{
+    [self addChildrenVC:self title:@"首页" image:@"news_Unselected" selectImage:@"news"];
+}
+
+-(void)addChildrenVC:(UIViewController*)vc title:(NSString*)title image:(NSString*)img selectImage:(NSString*)selectImg
+{
+    vc.title = title;
+    vc.tabBarItem.title = title;
+    vc.navigationItem.title = title;
+    vc.tabBarItem.image = [UIImage imageNamed:img];
+    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImg];
+}
 
 /*
 #pragma mark - Navigation

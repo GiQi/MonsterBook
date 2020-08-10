@@ -9,16 +9,38 @@
 #import "MIBHomeNavigationController.h"
 #import "MIBTabBarItem.h"
 #import "MIBBackButton.h"
+#import "MIBHomeViewController.h"
 
 @interface MIBHomeNavigationController ()<UIGestureRecognizerDelegate> 
 @property(nonatomic,strong)MIBBackButton *backButton;
+@property(nonatomic,strong)MIBHomeViewController *homeVC;
 @end
 
+static MIBHomeNavigationController *_instance = NULL;
 @implementation MIBHomeNavigationController
+
++(instancetype)shareInstance
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[MIBHomeNavigationController alloc] init];
+    });
+    return _instance;
+}
+
+-(instancetype)init
+{
+   _instance = [_instance initWithRootViewController:_homeVC];
+    
+    return _instance;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setViewControllers:@[self.homeVC]];
+    self.navigationBar.translucent = NO;
+    self.navigationBar.backgroundColor = [UIColor blueColor];
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -55,5 +77,14 @@
 {
    // 判断如果不是根控制器 才需要pop返回手势
     return self.childViewControllers.count > 1;
+}
+
+-(MIBHomeViewController *)homeVC
+{
+    if (_homeVC) {
+        return _homeVC;
+    }
+    _homeVC = [[MIBHomeViewController alloc] init];
+    return _homeVC;
 }
 @end

@@ -46,10 +46,10 @@
         buttonIndex++;
     }
     /**** 设置中间的发布按钮的frame ****/
-    self.publishButton.frame = CGRectMake(0, 0, buttonW, buttonH);
+    self.publishButton.frame = CGRectMake(0, -buttonH/2, buttonW, buttonH);
     self.publishButton.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
-    self.publishButton.backgroundColor = [UIColor redColor];
-//    [self.publishButton setImage:[UIImage imageNamed:@"morebg"] forState:UIControlStateNormal];
+//    [self.publishButton setTitle:@"发布" forState:UIControlStateNormal];
+//    self.publishButton.backgroundColor = [UIColor redColor];
     [self addSubview:self.publishButton];
 }
 
@@ -58,8 +58,14 @@
     if (_publishButton) {
         return _publishButton;
     }
-    _publishButton = [[MIBPublishButton alloc] init];
+    _publishButton = [MIBPublishButton buttonWithType:UIButtonTypeCustom];
+   
     return _publishButton;
+}
+
+-(void)publishButtonClick
+{
+    
 }
 
 @end

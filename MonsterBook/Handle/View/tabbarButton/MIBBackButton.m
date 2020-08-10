@@ -32,8 +32,8 @@
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    [button setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
-    [button setImage:[UIImage imageNamed:@"back_click"] forState:UIControlStateHighlighted];
+    [button setImage:[UIImage imageNamed:@"new"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"new"] forState:UIControlStateHighlighted];
     [button sizeToFit];
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return button;

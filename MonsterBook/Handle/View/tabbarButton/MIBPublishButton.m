@@ -7,7 +7,7 @@
 //
 
 #import "MIBPublishButton.h"
-
+static MIBPublishButton *_instance = NULL;
 @implementation MIBPublishButton
 
 /*
@@ -17,20 +17,30 @@
     // Drawing code
 }
 */
+-(instancetype)initButtonWithTarget:(id)target action:(SEL)action
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance= [MIBPublishButton buttonWithType:UIButtonTypeCustom];
+    });
+    [_instance addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return _instance;
+}
+
 -(void)layoutSubviews
 {
-    [self setImage:[UIImage imageNamed:@"添加图片.png"] forState:UIControlStateNormal];
+    [super layoutSubviews];
+
 }
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setImage:[UIImage imageNamed:@"add"] forState:UIControlStateNormal];
+        [self setBackgroundImage:[UIImage imageNamed:@"中间加号"] forState:UIControlStateNormal];
+        [self setBackgroundImage:[UIImage imageNamed:@"中间加号"] forState:UIControlStateHighlighted];
     }
     return self;
 }
-
-
 
 @end
