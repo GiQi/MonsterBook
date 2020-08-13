@@ -18,21 +18,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor yellowColor];
-    
 }
 
--(void)viewWillLayoutSubviews
-{
-    [self addChildrenVC:self title:@"首页" image:@"news_Unselected" selectImage:@"news"];
-}
-
--(void)addChildrenVC:(UIViewController*)vc title:(NSString*)title image:(NSString*)img selectImage:(NSString*)selectImg
+-(void)addChildrenVC:(UIViewController*)vc title:(NSString*)title image:(NSString*)imgStr selectImage:(NSString*)selectImgStr
 {
     vc.title = title;
     vc.tabBarItem.title = title;
     vc.navigationItem.title = title;
-    vc.tabBarItem.image = [UIImage imageNamed:img];
-    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImg];
+    UIImage *img = [UIImage imageNamed:imgStr];
+    UIImage *selectImg =[UIImage imageNamed:selectImgStr];
+    vc.tabBarItem.image = img;
+    vc.tabBarItem.selectedImage = selectImg;
+    
+    
 }
 
 /*

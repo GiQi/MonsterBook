@@ -30,7 +30,8 @@ static MIBHomeNavigationController *_instance = NULL;
 
 -(instancetype)init
 {
-   _instance = [_instance initWithRootViewController:_homeVC];
+    _instance = [super init];
+    _instance = [_instance initWithRootViewController:self.homeVC];
     
     return _instance;
 }
@@ -38,9 +39,17 @@ static MIBHomeNavigationController *_instance = NULL;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+}
+
+-(instancetype)initWithRootViewController:(UIViewController *)rootViewController
+{
+    self = [super initWithRootViewController:rootViewController];
     [self setViewControllers:@[self.homeVC]];
-    self.navigationBar.translucent = NO;
-    self.navigationBar.backgroundColor = [UIColor blueColor];
+//    self.navigationBar.translucent = NO;
+//    self.navigationBar.backgroundColor = [UIColor blueColor];
+    return self;
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -85,6 +94,7 @@ static MIBHomeNavigationController *_instance = NULL;
         return _homeVC;
     }
     _homeVC = [[MIBHomeViewController alloc] init];
+    [_homeVC addChildrenVC:_homeVC title:@"首页" image:@"news_Unselected" selectImage:@"news"];
     return _homeVC;
 }
 @end

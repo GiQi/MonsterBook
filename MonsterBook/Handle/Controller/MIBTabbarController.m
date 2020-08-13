@@ -54,20 +54,18 @@ static MIBTabbarController *_instance = NULL;
     //    self.window.backgroundColor = [UIColor whiteColor];
         
         // 设置窗口的跟控制器
-        UITabBarController * tabbarVC = [[UITabBarController alloc]init];
+//        UITabBarController * _instance = [[UITabBarController alloc]init];
         // 添加子控制器
 //        UIViewController * homeVC = [[UIViewController alloc]init];
         MIBTabBarItem *tabbar = [[MIBTabBarItem alloc] init];
-        [tabbarVC setValue:tabbar forKeyPath:@"tabBar"];
+        [_instance setValue:tabbar forKeyPath:@"tabBar"];
         // 设置标题
         // 设置默认图片
         // 设置选中图片
-//    [self addChildrenVC:self.homeVC title:@"首页" image:@"news_Unselected" selectImage:@"news"];
-//        self.view.backgroundColor = [UIColor yellowColor];
-        _homeNav = [[MIBHomeNavigationController alloc] initWithRootViewController:self.homeVC];
-//       _homeNav = [MIBHomeNavigationController shareInstance];
-//         _homeNav.navigationBar.translucent = NO;
-//        _homeNav.navigationBar.backgroundColor = [UIColor blueColor];
+    
+
+        self.view.backgroundColor = [UIColor yellowColor];
+        _homeNav = [[MIBHomeNavigationController shareInstance] init];;
 
         UIViewController * workVC = [[UIViewController alloc]init];
         [self addChildrenVC:workVC title:@"新帖" image:@"动态未选中" selectImage:@"动态选中"];
@@ -90,19 +88,19 @@ static MIBTabbarController *_instance = NULL;
         meNav.navigationBar.translucent = NO;
 
     NSArray *VCArray = [NSArray arrayWithObjects:self.homeNav,workNav,messageNav,meNav, nil];
-        tabbarVC.viewControllers = VCArray;
+        _instance.viewControllers = VCArray;
         
-//        tabbarVC.tabBar.barTintColor = [UIColor redColor];
-        tabbarVC.selectedIndex = 2;
+//        _instance.tabBar.barTintColor = [UIColor redColor];
+        _instance.selectedIndex = 2;
         //2.设置代理
-//        tabbarVC.delegate = self;
-        tabbarVC.selectedIndex = 0;
+//        _instance.delegate = self;
+        _instance.selectedIndex = 0;
     
         [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                               [UIColor grayColor], NSForegroundColorAttributeName,
                                                             nil] forState:UIControlStateSelected|UIControlStateNormal];
 
-        [window setRootViewController:tabbarVC];
+        [window setRootViewController:_instance];
         // 显示窗口
         [window makeKeyAndVisible];
 }
@@ -121,6 +119,14 @@ static MIBTabbarController *_instance = NULL;
     
 }
 
+-(MIBHomeViewController *)homeVC
+{
+    if (_homeVC) {
+        return _homeVC;
+    }
+    _homeVC = [[MIBHomeViewController alloc] init];
+    return _homeVC;
+}
 
 /*
 #pragma mark - Navigation

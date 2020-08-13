@@ -21,7 +21,10 @@
     // 创建窗口
 //    self.window = [[UIWindow alloc]init];
 //    self.window.frame = [UIScreen mainScreen].bounds;
-   
+   if (@available(iOS 13.0,*)) {
+       return YES;
+   }
+    [[MIBTabbarController shareInstance] setTabbarController:_window];
     return YES;
 }
 
