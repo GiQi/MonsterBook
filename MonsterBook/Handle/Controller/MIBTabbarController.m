@@ -10,11 +10,15 @@
 #import "MIBHomeViewController.h"
 #import "MIBHomeNavigationController.h"
 #import "MIBTabBarItem.h"
+#import "MIBTaleNavigationController.h"
+#import "MIBTaleTableView.h"
 
 @interface MIBTabbarController ()
 
 @property(nonatomic,strong)MIBHomeViewController *homeVC;
 @property(nonatomic,strong)MIBHomeNavigationController *homeNav;
+@property(nonatomic,strong)MIBTaleNavigationController *taleNav;
+@property(nonatomic,retain)MIBTaleTableView *taleTableView;
 
 @end
 static MIBTabbarController *_instance = NULL;
@@ -65,13 +69,10 @@ static MIBTabbarController *_instance = NULL;
     
 
         self.view.backgroundColor = [UIColor yellowColor];
-        _homeNav = [[MIBHomeNavigationController shareInstance] init];;
+        _homeNav = [[MIBHomeNavigationController shareInstance] init];
 
-        UIViewController * workVC = [[UIViewController alloc]init];
-        [self addChildrenVC:workVC title:@"新帖" image:@"动态未选中" selectImage:@"动态选中"];
-    //    workVC.view.backgroundColor = [UIColor redColor];
-        UINavigationController *workNav = [[UINavigationController alloc] initWithRootViewController:workVC];
-         workNav.navigationBar.translucent = NO;
+    _taleNav = [[MIBTaleNavigationController shareInstance] initWithRootViewController];
+
 
         UIViewController * messageVC = [[UIViewController alloc]init];
         [self addChildrenVC:messageVC title:@"关注" image:@"honmepage_Unselected" selectImage:@"honmepage"];
@@ -87,7 +88,7 @@ static MIBTabbarController *_instance = NULL;
         UINavigationController *meNav = [[UINavigationController alloc] initWithRootViewController:meVC];
         meNav.navigationBar.translucent = NO;
 
-    NSArray *VCArray = [NSArray arrayWithObjects:self.homeNav,workNav,messageNav,meNav, nil];
+    NSArray *VCArray = [NSArray arrayWithObjects:self.homeNav,_taleNav,messageNav,meNav, nil];
         _instance.viewControllers = VCArray;
         
 //        _instance.tabBar.barTintColor = [UIColor redColor];
@@ -127,6 +128,7 @@ static MIBTabbarController *_instance = NULL;
     _homeVC = [[MIBHomeViewController alloc] init];
     return _homeVC;
 }
+
 
 /*
 #pragma mark - Navigation

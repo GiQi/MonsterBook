@@ -10,6 +10,10 @@
 		1858F7C624D1656000131476 /* MIBTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858F7C524D1656000131476 /* MIBTabbarController.m */; };
 		1858F7C924D1728100131476 /* MIBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858F7C824D1728100131476 /* MIBHomeViewController.m */; };
 		186A830324DBDB31007A1C95 /* MIBBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 186A830224DBDB31007A1C95 /* MIBBackButton.m */; };
+		18BA5BCC24E66412004C5AE6 /* MIBTaleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BCB24E66412004C5AE6 /* MIBTaleTableView.m */; };
+		18BA5BCF24E66ACC004C5AE6 /* MIBTaleDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BCE24E66ACC004C5AE6 /* MIBTaleDataModel.m */; };
+		18BA5BD224E66D70004C5AE6 /* MIBTaleNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BD124E66D70004C5AE6 /* MIBTaleNavigationController.m */; };
+		18BA5BD524E687B8004C5AE6 /* MIBMeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BD324E687B8004C5AE6 /* MIBMeNavigationController.m */; };
 		18E0717424C6F208002D563D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0717324C6F208002D563D /* AppDelegate.m */; };
 		18E0717724C6F208002D563D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0717624C6F208002D563D /* SceneDelegate.m */; };
 		18E0717A24C6F208002D563D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0717924C6F208002D563D /* ViewController.m */; };
@@ -32,6 +36,14 @@
 		1858F7C824D1728100131476 /* MIBHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBHomeViewController.m; sourceTree = "<group>"; };
 		186A830124DBDB31007A1C95 /* MIBBackButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBBackButton.h; sourceTree = "<group>"; };
 		186A830224DBDB31007A1C95 /* MIBBackButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBBackButton.m; sourceTree = "<group>"; };
+		18BA5BCA24E66412004C5AE6 /* MIBTaleTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBTaleTableView.h; sourceTree = "<group>"; };
+		18BA5BCB24E66412004C5AE6 /* MIBTaleTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBTaleTableView.m; sourceTree = "<group>"; };
+		18BA5BCD24E66ACC004C5AE6 /* MIBTaleDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MIBTaleDataModel.h; path = Handle/Controller/MIBTaleDataModel.h; sourceTree = SOURCE_ROOT; };
+		18BA5BCE24E66ACC004C5AE6 /* MIBTaleDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MIBTaleDataModel.m; path = Handle/Controller/MIBTaleDataModel.m; sourceTree = SOURCE_ROOT; };
+		18BA5BD024E66D70004C5AE6 /* MIBTaleNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBTaleNavigationController.h; sourceTree = "<group>"; };
+		18BA5BD124E66D70004C5AE6 /* MIBTaleNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBTaleNavigationController.m; sourceTree = "<group>"; };
+		18BA5BD324E687B8004C5AE6 /* MIBMeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBMeNavigationController.m; sourceTree = "<group>"; };
+		18BA5BD424E687B8004C5AE6 /* MIBMeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBMeNavigationController.h; sourceTree = "<group>"; };
 		18E0716F24C6F208002D563D /* MonsterBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsterBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E0717224C6F208002D563D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E0717324C6F208002D563D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -117,6 +129,8 @@
 		18E5D8A024CEC5220077DEB9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18BA5BCD24E66ACC004C5AE6 /* MIBTaleDataModel.h */,
+				18BA5BCE24E66ACC004C5AE6 /* MIBTaleDataModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,12 +146,18 @@
 		18E5D8A224CEC5450077DEB9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18BA5BD424E687B8004C5AE6 /* MIBMeNavigationController.h */,
+				18BA5BD324E687B8004C5AE6 /* MIBMeNavigationController.m */,
 				1858F7C424D1656000131476 /* MIBTabbarController.h */,
 				1858F7C524D1656000131476 /* MIBTabbarController.m */,
 				1858F7C724D1728100131476 /* MIBHomeViewController.h */,
 				1858F7C824D1728100131476 /* MIBHomeViewController.m */,
 				18F6647124D29F1600C48892 /* MIBHomeNavigationController.h */,
 				18F6647224D29F1600C48892 /* MIBHomeNavigationController.m */,
+				18BA5BD024E66D70004C5AE6 /* MIBTaleNavigationController.h */,
+				18BA5BD124E66D70004C5AE6 /* MIBTaleNavigationController.m */,
+				18BA5BCA24E66412004C5AE6 /* MIBTaleTableView.h */,
+				18BA5BCB24E66412004C5AE6 /* MIBTaleTableView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,12 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BA5BD524E687B8004C5AE6 /* MIBMeNavigationController.m in Sources */,
 				18F6647324D29F1600C48892 /* MIBHomeNavigationController.m in Sources */,
 				18E5D8A524CEC5450077DEB9 /* MIBTabBarItem.m in Sources */,
+				18BA5BCF24E66ACC004C5AE6 /* MIBTaleDataModel.m in Sources */,
 				18E0717A24C6F208002D563D /* ViewController.m in Sources */,
 				18E0717424C6F208002D563D /* AppDelegate.m in Sources */,
+				18BA5BD224E66D70004C5AE6 /* MIBTaleNavigationController.m in Sources */,
 				1858F7C924D1728100131476 /* MIBHomeViewController.m in Sources */,
 				18E0718524C6F20A002D563D /* main.m in Sources */,
+				18BA5BCC24E66412004C5AE6 /* MIBTaleTableView.m in Sources */,
 				1858F7C624D1656000131476 /* MIBTabbarController.m in Sources */,
 				18E0717724C6F208002D563D /* SceneDelegate.m in Sources */,
 				18F6647024D2747C00C48892 /* MIBPublishButton.m in Sources */,

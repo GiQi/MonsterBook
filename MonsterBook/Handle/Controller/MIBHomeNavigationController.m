@@ -40,13 +40,12 @@ static MIBHomeNavigationController *_instance = NULL;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
 }
 
 -(instancetype)initWithRootViewController:(UIViewController *)rootViewController
 {
     self = [super initWithRootViewController:rootViewController];
-    [self setViewControllers:@[self.homeVC]];
+    [self setViewControllers:@[rootViewController]];
 //    self.navigationBar.translucent = NO;
 //    self.navigationBar.backgroundColor = [UIColor blueColor];
     return self;
