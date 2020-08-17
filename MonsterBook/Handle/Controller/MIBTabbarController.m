@@ -16,6 +16,9 @@
 #import "MIBMeTableViewController.h"
 #import "MIBMeNavigationController.h"
 
+#import "MIBMessageViewController.h"
+#import "MIBMessageNavgationController.h"
+
 @interface MIBTabbarController ()
 
 @property(nonatomic,strong)MIBHomeViewController *homeVC;
@@ -24,6 +27,7 @@
 @property(nonatomic,retain)MIBTaleTableView *taleTableView;
 @property(nonatomic,strong)MIBMeTableViewController *meTableView;
 @property(nonatomic,strong)MIBMeNavigationController *meNav;
+@property(nonatomic,strong)MIBMessageNavgationController *messageNav;
 
 @end
 static MIBTabbarController *_instance = NULL;
@@ -74,27 +78,15 @@ static MIBTabbarController *_instance = NULL;
     
 
         self.view.backgroundColor = [UIColor yellowColor];
-        _homeNav = [[MIBHomeNavigationController shareInstance] init];
+        _homeNav = [[MIBHomeNavigationController shareInstance] initHome];
 
     _taleNav = [[MIBTaleNavigationController shareInstance] initWithRootViewController];
+    
+    _messageNav = [[MIBMessageNavgationController shareInstance] initMessage];
 
     _meNav = [[MIBMeNavigationController shareInstance] initWithRootViewController];
-    
-        UIViewController * messageVC = [[UIViewController alloc]init];
-        [self addChildrenVC:messageVC title:@"关注" image:@"honmepage_Unselected" selectImage:@"honmepage"];
 
-    //    messageVC.view.backgroundColor = [UIColor blueColor];
-        UINavigationController *messageNav = [[UINavigationController alloc] initWithRootViewController:messageVC];
-        messageNav.navigationBar.translucent = NO;
-        
-        UIViewController * meVC = [[UIViewController alloc]init];
-        [self addChildrenVC:meVC title:@"我" image:@"my_Unselected" selectImage:@"my"];
-
-    //    meVC.view.backgroundColor = [UIColor greenColor];
-        UINavigationController *meNav = [[UINavigationController alloc] initWithRootViewController:meVC];
-        meNav.navigationBar.translucent = NO;
-
-    NSArray *VCArray = [NSArray arrayWithObjects:self.homeNav,_taleNav,messageNav,_meNav, nil];
+    NSArray *VCArray = [NSArray arrayWithObjects:self.homeNav,_taleNav,_messageNav,_meNav, nil];
         _instance.viewControllers = VCArray;
         
 //        _instance.tabBar.barTintColor = [UIColor redColor];

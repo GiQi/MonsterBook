@@ -1,23 +1,22 @@
 //
-//  MIBHomeViewController.m
+//  MIBMessageViewController.m
 //  MonsterBook
 //
-//  Created by Apple on 2020/7/29.
+//  Created by Apple on 2020/8/17.
 //  Copyright © 2020 Apple. All rights reserved.
 //
 
-#import "MIBHomeViewController.h"
+#import "MIBMessageViewController.h"
 
-@interface MIBHomeViewController ()
+@interface MIBMessageViewController ()
 
 @end
 
-@implementation MIBHomeViewController
+@implementation MIBMessageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor yellowColor];
 }
 
 -(void)addChildrenVC:(UIViewController*)vc title:(NSString*)title image:(NSString*)imgStr selectImage:(NSString*)selectImgStr
@@ -30,7 +29,6 @@
     vc.tabBarItem.image = img;
     vc.tabBarItem.selectedImage = selectImg;
 }
-
 /*
 #pragma mark - Navigation
 

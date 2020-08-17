@@ -1,8 +1,8 @@
 //
-//  MIBNavigationController.h
+//  MIBMessageNavgationController.h
 //  MonsterBook
 //
-//  Created by Apple on 2020/7/30.
+//  Created by Apple on 2020/8/17.
 //  Copyright © 2020 Apple. All rights reserved.
 //
 
@@ -10,9 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MIBHomeNavigationController : UINavigationController
+@interface MIBMessageNavgationController : UINavigationController
 +(instancetype)shareInstance;
--(instancetype)initHome;
+-(instancetype)initMessage;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -28,7 +28,7 @@ static MIBHomeNavigationController *_instance = NULL;
     return _instance;
 }
 
--(instancetype)init
+-(instancetype)initHome
 {
     _instance = [super init];
     _instance = [_instance initWithRootViewController:self.homeVC];
