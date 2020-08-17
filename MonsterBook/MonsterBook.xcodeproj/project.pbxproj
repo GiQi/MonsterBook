@@ -14,6 +14,7 @@
 		18BA5BCF24E66ACC004C5AE6 /* MIBTaleDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BCE24E66ACC004C5AE6 /* MIBTaleDataModel.m */; };
 		18BA5BD224E66D70004C5AE6 /* MIBTaleNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BD124E66D70004C5AE6 /* MIBTaleNavigationController.m */; };
 		18BA5BD524E687B8004C5AE6 /* MIBMeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BD324E687B8004C5AE6 /* MIBMeNavigationController.m */; };
+		18DD426D24EA194800026DC2 /* MIBMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD426C24EA194800026DC2 /* MIBMeTableViewController.m */; };
 		18E0717424C6F208002D563D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0717324C6F208002D563D /* AppDelegate.m */; };
 		18E0717724C6F208002D563D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0717624C6F208002D563D /* SceneDelegate.m */; };
 		18E0717A24C6F208002D563D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0717924C6F208002D563D /* ViewController.m */; };
@@ -44,6 +45,8 @@
 		18BA5BD124E66D70004C5AE6 /* MIBTaleNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBTaleNavigationController.m; sourceTree = "<group>"; };
 		18BA5BD324E687B8004C5AE6 /* MIBMeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBMeNavigationController.m; sourceTree = "<group>"; };
 		18BA5BD424E687B8004C5AE6 /* MIBMeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBMeNavigationController.h; sourceTree = "<group>"; };
+		18DD426B24EA194800026DC2 /* MIBMeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBMeTableViewController.h; sourceTree = "<group>"; };
+		18DD426C24EA194800026DC2 /* MIBMeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBMeTableViewController.m; sourceTree = "<group>"; };
 		18E0716F24C6F208002D563D /* MonsterBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsterBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E0717224C6F208002D563D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E0717324C6F208002D563D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				18BA5BD024E66D70004C5AE6 /* MIBTaleNavigationController.h */,
 				18BA5BD124E66D70004C5AE6 /* MIBTaleNavigationController.m */,
 				18BA5BCA24E66412004C5AE6 /* MIBTaleTableView.h */,
+				18DD426B24EA194800026DC2 /* MIBMeTableViewController.h */,
+				18DD426C24EA194800026DC2 /* MIBMeTableViewController.m */,
 				18BA5BCB24E66412004C5AE6 /* MIBTaleTableView.m */,
 			);
 			path = Controller;
@@ -290,6 +295,7 @@
 			files = (
 				18BA5BD524E687B8004C5AE6 /* MIBMeNavigationController.m in Sources */,
 				18F6647324D29F1600C48892 /* MIBHomeNavigationController.m in Sources */,
+				18DD426D24EA194800026DC2 /* MIBMeTableViewController.m in Sources */,
 				18E5D8A524CEC5450077DEB9 /* MIBTabBarItem.m in Sources */,
 				18BA5BCF24E66ACC004C5AE6 /* MIBTaleDataModel.m in Sources */,
 				18E0717A24C6F208002D563D /* ViewController.m in Sources */,

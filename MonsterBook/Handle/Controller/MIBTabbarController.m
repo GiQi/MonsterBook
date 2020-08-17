@@ -13,12 +13,17 @@
 #import "MIBTaleNavigationController.h"
 #import "MIBTaleTableView.h"
 
+#import "MIBMeTableViewController.h"
+#import "MIBMeNavigationController.h"
+
 @interface MIBTabbarController ()
 
 @property(nonatomic,strong)MIBHomeViewController *homeVC;
 @property(nonatomic,strong)MIBHomeNavigationController *homeNav;
 @property(nonatomic,strong)MIBTaleNavigationController *taleNav;
 @property(nonatomic,retain)MIBTaleTableView *taleTableView;
+@property(nonatomic,strong)MIBMeTableViewController *meTableView;
+@property(nonatomic,strong)MIBMeNavigationController *meNav;
 
 @end
 static MIBTabbarController *_instance = NULL;
@@ -73,7 +78,8 @@ static MIBTabbarController *_instance = NULL;
 
     _taleNav = [[MIBTaleNavigationController shareInstance] initWithRootViewController];
 
-
+    _meNav = [[MIBMeNavigationController shareInstance] initWithRootViewController];
+    
         UIViewController * messageVC = [[UIViewController alloc]init];
         [self addChildrenVC:messageVC title:@"关注" image:@"honmepage_Unselected" selectImage:@"honmepage"];
 
@@ -88,7 +94,7 @@ static MIBTabbarController *_instance = NULL;
         UINavigationController *meNav = [[UINavigationController alloc] initWithRootViewController:meVC];
         meNav.navigationBar.translucent = NO;
 
-    NSArray *VCArray = [NSArray arrayWithObjects:self.homeNav,_taleNav,messageNav,meNav, nil];
+    NSArray *VCArray = [NSArray arrayWithObjects:self.homeNav,_taleNav,messageNav,_meNav, nil];
         _instance.viewControllers = VCArray;
         
 //        _instance.tabBar.barTintColor = [UIColor redColor];
