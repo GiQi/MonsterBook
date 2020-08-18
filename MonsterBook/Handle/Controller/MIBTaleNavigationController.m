@@ -19,7 +19,7 @@ static MIBTaleNavigationController *_instance = NULL;
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[MIBTaleNavigationController alloc] init];
+        _instance = [[self alloc] init];
     });
     return _instance;
 }
@@ -52,8 +52,8 @@ static MIBTaleNavigationController *_instance = NULL;
         return _taleTableVC;
     }
     _taleTableVC = [[MIBTaleTableView alloc] init];
-    [_taleTableVC addChildrenVC:_taleTableVC title:@"奇谈" image:@"动态未选中" selectImage:@"动态选中"];
-//    _taleTableVC
+    [MIBViewTools addChildrenVC:_taleTableVC title:@"奇谈" image:@"动态未选中" selectImage:@"动态选中"];
+
     return _taleTableVC;
 }
 

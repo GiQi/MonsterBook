@@ -20,7 +20,7 @@ static MIBMessageNavgationController *_instance = NULL;
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[MIBMessageNavgationController alloc] init];
+        _instance = [[self alloc] init];
     });
     return _instance;
 }
@@ -51,7 +51,7 @@ static MIBMessageNavgationController *_instance = NULL;
         return _messageVC;
     }
     _messageVC = [[MIBMessageViewController alloc] init];
-    [_messageVC addChildrenVC:_messageVC title:@"消息" image:@"honmepage_Unselected" selectImage:@"honmepage"];
+    [MIBViewTools addChildrenVC:_messageVC title:@"消息" image:@"honmepage_Unselected" selectImage:@"honmepage"];
     return _messageVC;
 }
 /*

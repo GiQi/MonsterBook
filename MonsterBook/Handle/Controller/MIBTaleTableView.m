@@ -22,18 +22,6 @@
     [self.view addSubview:_tableView];
 }
 
--(void)addChildrenVC:(UITableViewController*)vc title:(NSString*)title image:(NSString*)imgStr selectImage:(NSString*)selectImgStr
-{
-    vc.title = title;
-    vc.tabBarItem.title = title;
-    vc.navigationItem.title = title;
-    UIImage *img = [UIImage imageNamed:imgStr];
-    UIImage *selectImg =[UIImage imageNamed:selectImgStr];
-    vc.tabBarItem.image = img;
-    vc.tabBarItem.selectedImage = selectImg;
-    
-    
-}
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;

@@ -55,17 +55,6 @@
     UIViewController *selectVC = tabBarController.selectedViewController;
     NSLog(@"选中的index: %zd， 选中的ViewController: %@", tabBarController.selectedIndex, selectVC);
 }
-
--(void)addChildrenVC:(UIViewController*)vc title:(NSString*)title image:(NSString*)img selectImage:(NSString*)selectImg
-{
-    vc.title = title;
-    vc.tabBarItem.title = title;
-    vc.navigationItem.title = title;
-    vc.tabBarItem.image = [UIImage imageNamed:img];
-    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImg];
-    
-}
-
  
 -(BOOL)isCurrentViewControllerVisible:(UIViewController *)viewController
 {

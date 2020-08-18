@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1858F7C624D1656000131476 /* MIBTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858F7C524D1656000131476 /* MIBTabbarController.m */; };
 		1858F7C924D1728100131476 /* MIBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858F7C824D1728100131476 /* MIBHomeViewController.m */; };
+		1866B04424EB689E005E65E6 /* MIBViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866B04324EB689E005E65E6 /* MIBViewTools.m */; };
+		1866B04824EB7003005E65E6 /* UIBarButtonItem+CLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866B04724EB7003005E65E6 /* UIBarButtonItem+CLExtension.m */; };
+		1866B04B24EB720B005E65E6 /* UIView+CLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866B04A24EB720B005E65E6 /* UIView+CLExtension.m */; };
 		186A830324DBDB31007A1C95 /* MIBBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 186A830224DBDB31007A1C95 /* MIBBackButton.m */; };
 		18BA5BCC24E66412004C5AE6 /* MIBTaleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BCB24E66412004C5AE6 /* MIBTaleTableView.m */; };
 		18BA5BCF24E66ACC004C5AE6 /* MIBTaleDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BCE24E66ACC004C5AE6 /* MIBTaleDataModel.m */; };
@@ -37,6 +40,12 @@
 		1858F7C524D1656000131476 /* MIBTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBTabbarController.m; sourceTree = "<group>"; };
 		1858F7C724D1728100131476 /* MIBHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBHomeViewController.h; sourceTree = "<group>"; };
 		1858F7C824D1728100131476 /* MIBHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBHomeViewController.m; sourceTree = "<group>"; };
+		1866B04224EB689E005E65E6 /* MIBViewTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBViewTools.h; sourceTree = "<group>"; };
+		1866B04324EB689E005E65E6 /* MIBViewTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBViewTools.m; sourceTree = "<group>"; };
+		1866B04624EB7003005E65E6 /* UIBarButtonItem+CLExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CLExtension.h"; sourceTree = "<group>"; };
+		1866B04724EB7003005E65E6 /* UIBarButtonItem+CLExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CLExtension.m"; sourceTree = "<group>"; };
+		1866B04924EB720B005E65E6 /* UIView+CLExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CLExtension.h"; sourceTree = "<group>"; };
+		1866B04A24EB720B005E65E6 /* UIView+CLExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CLExtension.m"; sourceTree = "<group>"; };
 		186A830124DBDB31007A1C95 /* MIBBackButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBBackButton.h; sourceTree = "<group>"; };
 		186A830224DBDB31007A1C95 /* MIBBackButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBBackButton.m; sourceTree = "<group>"; };
 		18BA5BCA24E66412004C5AE6 /* MIBTaleTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBTaleTableView.h; sourceTree = "<group>"; };
@@ -87,6 +96,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1866B04124EB6846005E65E6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				1866B04224EB689E005E65E6 /* MIBViewTools.h */,
+				1866B04324EB689E005E65E6 /* MIBViewTools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		1866B04524EB6F62005E65E6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1866B04624EB7003005E65E6 /* UIBarButtonItem+CLExtension.h */,
+				1866B04724EB7003005E65E6 /* UIBarButtonItem+CLExtension.m */,
+				1866B04924EB720B005E65E6 /* UIView+CLExtension.h */,
+				1866B04A24EB720B005E65E6 /* UIView+CLExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		18E0716624C6F208002D563D = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +137,8 @@
 		18E0717124C6F208002D563D /* MonsterBook */ = {
 			isa = PBXGroup;
 			children = (
+				1866B04524EB6F62005E65E6 /* Category */,
+				1866B04124EB6846005E65E6 /* Tools */,
 				18E5D89F24CEC5220077DEB9 /* Handle */,
 				18E0717224C6F208002D563D /* AppDelegate.h */,
 				18E0717324C6F208002D563D /* AppDelegate.m */,
@@ -309,13 +340,16 @@
 				18DD426D24EA194800026DC2 /* MIBMeTableViewController.m in Sources */,
 				18E5D8A524CEC5450077DEB9 /* MIBTabBarItem.m in Sources */,
 				18BA5BCF24E66ACC004C5AE6 /* MIBTaleDataModel.m in Sources */,
+				1866B04824EB7003005E65E6 /* UIBarButtonItem+CLExtension.m in Sources */,
 				18E0717A24C6F208002D563D /* ViewController.m in Sources */,
 				18E0717424C6F208002D563D /* AppDelegate.m in Sources */,
 				18BA5BD224E66D70004C5AE6 /* MIBTaleNavigationController.m in Sources */,
 				1858F7C924D1728100131476 /* MIBHomeViewController.m in Sources */,
 				18E0718524C6F20A002D563D /* main.m in Sources */,
+				1866B04424EB689E005E65E6 /* MIBViewTools.m in Sources */,
 				18BA5BCC24E66412004C5AE6 /* MIBTaleTableView.m in Sources */,
 				1858F7C624D1656000131476 /* MIBTabbarController.m in Sources */,
+				1866B04B24EB720B005E65E6 /* UIView+CLExtension.m in Sources */,
 				18DD427324EA1D9300026DC2 /* MIBMessageNavgationController.m in Sources */,
 				18E0717724C6F208002D563D /* SceneDelegate.m in Sources */,
 				18F6647024D2747C00C48892 /* MIBPublishButton.m in Sources */,
@@ -462,6 +496,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ZQA28SEBC;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MonsterBook/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MonsterBook/Tools/MIBViewTools.h\"";
 				INFOPLIST_FILE = MonsterBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,6 +518,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ZQA28SEBC;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MonsterBook/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MonsterBook/Tools/MIBViewTools.h\"";
 				INFOPLIST_FILE = MonsterBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

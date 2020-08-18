@@ -91,17 +91,6 @@
     // Pass the selected object to the new view controller.
 }
 */
--(void)addChildrenVC:(UITableViewController*)vc title:(NSString*)title image:(NSString*)imgStr selectImage:(NSString*)selectImgStr
-{
-    vc.title = title;
-    vc.tabBarItem.title = title;
-    vc.navigationItem.title = title;
-    UIImage *img = [UIImage imageNamed:imgStr];
-    UIImage *selectImg =[UIImage imageNamed:selectImgStr];
-    vc.tabBarItem.image = img;
-    vc.tabBarItem.selectedImage = selectImg;
-    
-    
-}
+
 
 @end

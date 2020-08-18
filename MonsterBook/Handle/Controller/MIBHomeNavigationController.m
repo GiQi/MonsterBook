@@ -23,7 +23,7 @@ static MIBHomeNavigationController *_instance = NULL;
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[MIBHomeNavigationController alloc] init];
+        _instance = [[self alloc] init];
     });
     return _instance;
 }
@@ -93,7 +93,8 @@ static MIBHomeNavigationController *_instance = NULL;
         return _homeVC;
     }
     _homeVC = [[MIBHomeViewController alloc] init];
-    [_homeVC addChildrenVC:_homeVC title:@"首页" image:@"news_Unselected" selectImage:@"news"];
+    
+    [MIBViewTools addChildrenVC:_homeVC title:@"首页" image:@"news_Unselected" selectImage:@"news"];
     return _homeVC;
 }
 @end

@@ -58,15 +58,5 @@
     // to restore the scene back to its current state.
 }
 
--(void)addChildrenVC:(UIViewController*)vc title:(NSString*)title image:(NSString*)img selectImage:(NSString*)selectImg
-{
-    vc.title = title;
-    vc.tabBarItem.title = title;
-    vc.navigationItem.title = title;
-    vc.tabBarItem.image = [UIImage imageNamed:img];
-    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImg];
-    
-}
-
 
 @end
