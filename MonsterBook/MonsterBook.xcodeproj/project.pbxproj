@@ -116,6 +116,17 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		1866B04C24EB7C5C005E65E6 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				18DD426E24EA1D1A00026DC2 /* MIBMessageViewController.h */,
+				18DD426F24EA1D1A00026DC2 /* MIBMessageViewController.m */,
+				18DD427124EA1D9300026DC2 /* MIBMessageNavgationController.h */,
+				18DD427224EA1D9300026DC2 /* MIBMessageNavgationController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		18E0716624C6F208002D563D = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +197,7 @@
 		18E5D8A224CEC5450077DEB9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1866B04C24EB7C5C005E65E6 /* Message */,
 				1858F7C424D1656000131476 /* MIBTabbarController.h */,
 				1858F7C524D1656000131476 /* MIBTabbarController.m */,
 				1858F7C724D1728100131476 /* MIBHomeViewController.h */,
@@ -196,10 +208,6 @@
 				18BA5BD124E66D70004C5AE6 /* MIBTaleNavigationController.m */,
 				18BA5BCA24E66412004C5AE6 /* MIBTaleTableView.h */,
 				18BA5BCB24E66412004C5AE6 /* MIBTaleTableView.m */,
-				18DD426E24EA1D1A00026DC2 /* MIBMessageViewController.h */,
-				18DD426F24EA1D1A00026DC2 /* MIBMessageViewController.m */,
-				18DD427124EA1D9300026DC2 /* MIBMessageNavgationController.h */,
-				18DD427224EA1D9300026DC2 /* MIBMessageNavgationController.m */,
 				18BA5BD424E687B8004C5AE6 /* MIBMeNavigationController.h */,
 				18BA5BD324E687B8004C5AE6 /* MIBMeNavigationController.m */,
 				18DD426B24EA194800026DC2 /* MIBMeTableViewController.h */,
