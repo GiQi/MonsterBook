@@ -64,7 +64,17 @@
 
 -(void)publishButtonClick
 {
-    NSLog(@"click publish btn");
+//    // 比如Loacl是en_Zh
+//    NSString *identifier = [[NSLocale currentLocale] localeIdentifier];
+//    // displayName = “中国”
+//    NSString *displayName = [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value:identifier];
+    
+    NSString *udfLanguageCode = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
+    NSString *pfLanguageCode = [NSLocale preferredLanguages];
+    NSString *localeLanguageCode = [[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode];
+    NSString *language =  [[NSBundle mainBundle] preferredLocalizations];
+    CLLog(@"\nudfLanguageCode：%@ \npfLanguageCode:%@ \nlocaleLanguageCode:%@ \nlanguage:%@",udfLanguageCode,pfLanguageCode,localeLanguageCode,language);
+    
 }
 
 @end

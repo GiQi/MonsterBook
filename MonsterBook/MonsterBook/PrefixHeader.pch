@@ -12,7 +12,7 @@
 #import "UIBarButtonItem+CLExtension.h"
 
 #ifdef DEBUG
-#define CLLog(...) NSlog(__VA_AGRS__)
+#define CLLog(...) NSLog(__VA_ARGS__)
 #else
 #define CLlog(...)
 #endif

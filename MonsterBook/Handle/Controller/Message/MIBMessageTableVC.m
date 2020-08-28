@@ -1,28 +1,22 @@
 //
-//  MIBMeTableViewController.m
+//  MIBMessageTableVC.m
 //  MonsterBook
 //
-//  Created by Apple on 2020/8/17.
+//  Created by Apple on 2020/8/18.
 //  Copyright © 2020 Apple. All rights reserved.
 //
 
-#import "MIBMeTableViewController.h"
-#import "MYPersonalInformationCell.h"
+#import "MIBMessageTableVC.h"
 
-@interface MIBMeTableViewController ()
-{
-    UITableView *_tableView;
-}
+@interface MIBMessageTableVC ()
 
-@property(nonatomic,strong)NSArray *dataArr;
 @end
 
-@implementation MIBMeTableViewController
+@implementation MIBMessageTableVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _tableView.dataSource = self;
-    [self.view addSubview:_tableView];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -33,50 +27,24 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-    return 1;
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-    return 1;
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSString *cellID = @"mycell";
-    if (indexPath.row > 0) {
-        cellID = @"";
-    }
-//    MYPersonalInformationCell *cell = [tableView registerNib:[UINib nibWithNibName:@"MYPersonalInformation" bundle:nil] forCellReuseIdentifier:cellID];
-    MYPersonalInformationCell *cellInfo = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (cellInfo == nil) {
-        cellInfo = [[MYPersonalInformationCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
-    }
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    [cellInfo config:self.dataArr[indexPath.row]];
+    // Configure the cell...
     
-//    cell.textLabel.text = @"Me";
-//    cell.detailTextLabel.text = @"shiashishihsih";
-    return cellInfo;
+    return cell;
 }
-
-
-- (NSArray *)dataArr
-{
-    if (_dataArr) {
-        return _dataArr;
-    }
-    MYPersonalInformationModel *model = [[MYPersonalInformationModel alloc] init];
-    model.headView = [UIImage imageNamed:@"my"];
-    model.name = @"你是谁";
-    model.level = @"1";
-    model.vip = @"0";
-    model.honor = @"凡人";
-    _dataArr = @[model];
-    return _dataArr;
-}
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -121,6 +89,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 
 @end

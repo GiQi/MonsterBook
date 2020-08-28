@@ -8,9 +8,11 @@
 
 #import "MIBMessageNavgationController.h"
 #import "MIBMessageViewController.h"
+#import "MIBBackButton.h"
 
-@interface MIBMessageNavgationController ()
+@interface MIBMessageNavgationController ()<UIGestureRecognizerDelegate>
 @property(nonatomic,strong)MIBMessageViewController *messageVC;
+@property(nonatomic,strong)MIBBackButton *backButton;
 @end
 
 static MIBMessageNavgationController *_instance = NULL;
@@ -53,6 +55,30 @@ static MIBMessageNavgationController *_instance = NULL;
     _messageVC = [[MIBMessageViewController alloc] init];
     [MIBViewTools addChildrenVC:_messageVC title:@"消息" image:@"honmepage_Unselected" selectImage:@"honmepage"];
     return _messageVC;
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    self.interactivePopGestureRecognizer.delegate = self;
+//    if (self.childViewControllers.count > 0) {
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backButton];
+//    }
+    [super pushViewController:viewController animated:animated];
+    
+}
+
+- (MIBBackButton *)backButton
+{
+    if (_backButton == nil) {
+        _backButton = [MIBBackButton setBackButtonWithTarget:self action:@selector(backButtonClick)];
+    }
+    return _backButton;
+}
+
+-(void)backButtonClick
+{
+    [self popoverPresentationController];
+    CLLog(@"event - backbuttonClick");
 }
 /*
 #pragma mark - Navigation

@@ -8,7 +8,7 @@
 
 #import "MIBMessageViewController.h"
 
-@interface MIBMessageViewController ()
+@interface MIBMessageViewController ()<segmentDelegate>
 
 @end
 
@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [MIBViewTools initSegmentControl:self];
 }
+
 
 /*
 #pragma mark - Navigation
@@ -28,5 +30,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)doSomethingSegment:(nonnull UISegmentedControl *)segment {
+      NSInteger index = segment.selectedSegmentIndex;
+      switch (index) {
+          case 0:
+              
+              break;
+          case 1:
+              
+              break;
+          default:
+              break;
+      }
+}
+
 
 @end

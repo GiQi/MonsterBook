@@ -8,6 +8,7 @@
 
 #import "MIBViewTools.h"
 
+
 static MIBViewTools *_instance = NULL;
 @implementation MIBViewTools
 +(instancetype)shareInstance
@@ -38,5 +39,43 @@ static MIBViewTools *_instance = NULL;
     vc.tabBarItem.image = img;
     vc.tabBarItem.selectedImage = selectImg;
 }
+
++(void)initSegmentControl:(UIViewController *)vc
+{
+    
+    NSArray *arraySegment = [[NSArray alloc] initWithObjects:@"关注",@"消息",nil];
+    UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:arraySegment];
+    segment.frame = CGRectMake(10, 20, vc.view.cl_width, 30);
+    segment.tintColor = CLColor(49,148,208);
+    segment.selectedSegmentIndex = 0;
+    
+    NSDictionary *attribute = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:12],NSFontAttributeName,[UIColor grayColor],NSForegroundColorAttributeName,nil, nil];
+    
+    [segment setTitleTextAttributes:attribute forState:UIControlStateNormal];
+    
+    NSDictionary *highlightAttribute = [NSDictionary dictionaryWithObject:[UIColor redColor] forKey:NSForegroundColorAttributeName];
+    [segment setTitleTextAttributes:highlightAttribute forState:UIControlStateHighlighted];
+    
+    [segment addTarget:vc action:@selector(doSomethingSegment:) forControlEvents:UIControlEventValueChanged];
+    
+    [vc.navigationController.navigationBar.topItem setTitleView:segment];
+//    [vc. addSubview:segment];
+//    return segment;
+}
+
+//-(void)doSomethingSegment:(UISegmentedControl *)segment
+//{
+//    NSInteger index = segment.selectedSegmentIndex;
+//    switch (index) {
+//        case 0:
+//            
+//            break;
+//        case 1:
+//            
+//            break;
+//        default:
+//            break;
+//    }
+//}
 
 @end

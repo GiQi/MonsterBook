@@ -12,7 +12,7 @@
 #import "MIBHomeViewController.h"
 
 @interface MIBHomeNavigationController ()<UIGestureRecognizerDelegate> 
-@property(nonatomic,strong)MIBBackButton *backButton;
+@property(nonatomic,strong)UIBarButtonItem *backButton;
 @property(nonatomic,strong)MIBHomeViewController *homeVC;
 @end
 
@@ -54,15 +54,15 @@ static MIBHomeNavigationController *_instance = NULL;
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     self.interactivePopGestureRecognizer.delegate = self;
-    if (self.childViewControllers.count > 0) {
-        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backButton];
-    }
+//    if (self.childViewControllers.count > 0) {
+        viewController.navigationItem.leftBarButtonItem = self.backButton;
+//    }
 }
 
-- (MIBBackButton *)backButton
+- (UIBarButtonItem *)backButton
 {
     if (_backButton == nil) {
-        _backButton = [MIBBackButton setBackButtonWithTarget:self action:@selector(backButtonClick)];
+        _backButton = [UIBarButtonItem itemWithImage:@"news_Unselected" HeightImage:@"news_Unselected" Target:self action:@selector(backButtonClick)];
     }
     return _backButton;
 }

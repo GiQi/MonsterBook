@@ -32,10 +32,11 @@
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    [button setImage:[UIImage imageNamed:@"new"] forState:UIControlStateNormal];
-    [button setImage:[UIImage imageNamed:@"new"] forState:UIControlStateHighlighted];
+    [button setImage:[UIImage imageNamed:@"news_Unselected"] forState:UIControlStateNormal];
+//    [button setImage:[UIImage imageNamed:@"search_button"] forState:UIControlStateHighlighted];
     [button sizeToFit];
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
     return button;
 }
 
