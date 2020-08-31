@@ -77,7 +77,7 @@ static MIBTabbarController *_instance = NULL;
         // 设置选中图片
     
 
-        self.view.backgroundColor = [UIColor yellowColor];
+        self.view.backgroundColor = [UIColor whiteColor];
         _homeNav = [[MIBHomeNavigationController shareInstance] initHome];
 
     _taleNav = [[MIBTaleNavigationController shareInstance] initWithRootViewController];

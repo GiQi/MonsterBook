@@ -73,7 +73,7 @@
     NSString *pfLanguageCode = [NSLocale preferredLanguages];
     NSString *localeLanguageCode = [[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode];
     NSString *language =  [[NSBundle mainBundle] preferredLocalizations];
-    CLLog(@"\nudfLanguageCode：%@ \npfLanguageCode:%@ \nlocaleLanguageCode:%@ \nlanguage:%@",udfLanguageCode,pfLanguageCode,localeLanguageCode,language);
+    RJLog(@"\nudfLanguageCode：%@ \npfLanguageCode:%@ \nlocaleLanguageCode:%@ \nlanguage:%@",udfLanguageCode,pfLanguageCode,localeLanguageCode,language);
     
 }
 

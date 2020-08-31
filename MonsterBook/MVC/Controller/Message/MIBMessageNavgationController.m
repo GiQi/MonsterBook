@@ -78,7 +78,7 @@ static MIBMessageNavgationController *_instance = NULL;
 -(void)backButtonClick
 {
     [self popoverPresentationController];
-    CLLog(@"event - backbuttonClick");
+    RJLog(@"event - backbuttonClick");
 }
 /*
 #pragma mark - Navigation

@@ -46,7 +46,7 @@ static MIBViewTools *_instance = NULL;
     NSArray *arraySegment = [[NSArray alloc] initWithObjects:@"关注",@"消息",nil];
     UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:arraySegment];
     segment.frame = CGRectMake(10, 20, vc.view.cl_width, 30);
-    segment.tintColor = CLColor(49,148,208);
+    segment.tintColor = RJColor(49,148,208);
     segment.selectedSegmentIndex = 0;
     
     NSDictionary *attribute = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:12],NSFontAttributeName,[UIColor grayColor],NSForegroundColorAttributeName,nil, nil];
@@ -59,8 +59,7 @@ static MIBViewTools *_instance = NULL;
     [segment addTarget:vc action:@selector(doSomethingSegment:) forControlEvents:UIControlEventValueChanged];
     
     [vc.navigationController.navigationBar.topItem setTitleView:segment];
-//    [vc. addSubview:segment];
-//    return segment;
+
 }
 
 //-(void)doSomethingSegment:(UISegmentedControl *)segment

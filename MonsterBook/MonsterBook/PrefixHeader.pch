@@ -12,19 +12,19 @@
 #import "UIBarButtonItem+CLExtension.h"
 
 #ifdef DEBUG
-#define CLLog(...) NSLog(__VA_ARGS__)
+#define RJLog(...) NSLog(__VA_ARGS__)
 #else
-#define CLlog(...)
+#define RJlog(...)
 #endif
 /* 颜色  ********/
 //RGBA
-#define CLColorA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define RJColorA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 //RGB
-#define CLColor(r,g,b) CLColorA(r,g,b,1)
+#define RJColor(r,g,b) RJColorA(r,g,b,1)
 //随机颜色
-#define CLRandomColor CLColor(arc4random_uniform(255),arcrandom_uniform(255),arc4random_uniform(255))
+#define RJRandomColor RJColor(arc4random_uniform(255),arcrandom_uniform(255),arc4random_uniform(255))
 //灰
-#define CLCommonColor(v) ClColor(v,v,v)
+#define RJCommonColor(v) RJColor(v,v,v)
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #endif

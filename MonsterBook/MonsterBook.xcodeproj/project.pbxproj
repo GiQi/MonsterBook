@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180B3E5524ECE0360029704F /* MYPersonalInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180B3E5424ECE0360029704F /* MYPersonalInformationModel.m */; };
 		180B3E5B24ED02D10029704F /* MYPersonalInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180B3E5A24ED02D10029704F /* MYPersonalInformationCell.m */; };
 		180B3E5D24ED0A120029704F /* MYPersonalInformation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180B3E5C24ED0A120029704F /* MYPersonalInformation.xib */; };
 		1858F7C624D1656000131476 /* MIBTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858F7C524D1656000131476 /* MIBTabbarController.m */; };
@@ -18,10 +17,12 @@
 		1866B04F24EB7DA0005E65E6 /* MIBMessageTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866B04E24EB7DA0005E65E6 /* MIBMessageTableVC.m */; };
 		1866B05224EB8255005E65E6 /* RJMessageSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866B05124EB8255005E65E6 /* RJMessageSegmentView.m */; };
 		186A830324DBDB31007A1C95 /* MIBBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 186A830224DBDB31007A1C95 /* MIBBackButton.m */; };
-		1897E0D224F63D5600C89209 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1897E0D124F63D5600C89209 /* LoginView.xib */; };
+		187C909B24FC918E00266FF1 /* MYPersonalInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C909724FC918E00266FF1 /* MYPersonalInformationModel.m */; };
+		187C909C24FC918E00266FF1 /* MIBTaleDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C909824FC918E00266FF1 /* MIBTaleDataModel.m */; };
+		187C909F24FCA88800266FF1 /* UITextField+RJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C909E24FCA88800266FF1 /* UITextField+RJExtension.m */; };
+		187C90A224FCCB5B00266FF1 /* MIBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C90A124FCCB5B00266FF1 /* MIBLoginViewController.m */; };
 		1897E0D524F63E5800C89209 /* MIBLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897E0D424F63E5800C89209 /* MIBLoginView.m */; };
 		18BA5BCC24E66412004C5AE6 /* MIBTaleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BCB24E66412004C5AE6 /* MIBTaleTableView.m */; };
-		18BA5BCF24E66ACC004C5AE6 /* MIBTaleDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BCE24E66ACC004C5AE6 /* MIBTaleDataModel.m */; };
 		18BA5BD224E66D70004C5AE6 /* MIBTaleNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BD124E66D70004C5AE6 /* MIBTaleNavigationController.m */; };
 		18BA5BD524E687B8004C5AE6 /* MIBMeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BD324E687B8004C5AE6 /* MIBMeNavigationController.m */; };
 		18DD426D24EA194800026DC2 /* MIBMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD426C24EA194800026DC2 /* MIBMeTableViewController.m */; };
@@ -42,8 +43,6 @@
 
 /* Begin PBXFileReference section */
 		08F242E6DBA5C774D5AEB346 /* Pods-MonsterBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsterBook.debug.xcconfig"; path = "Target Support Files/Pods-MonsterBook/Pods-MonsterBook.debug.xcconfig"; sourceTree = "<group>"; };
-		180B3E5324ECE0360029704F /* MYPersonalInformationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MYPersonalInformationModel.h; path = Handle/View/MYPersonalInformationModel.h; sourceTree = SOURCE_ROOT; };
-		180B3E5424ECE0360029704F /* MYPersonalInformationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MYPersonalInformationModel.m; path = Handle/View/MYPersonalInformationModel.m; sourceTree = SOURCE_ROOT; };
 		180B3E5924ED02D10029704F /* MYPersonalInformationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYPersonalInformationCell.h; sourceTree = "<group>"; };
 		180B3E5A24ED02D10029704F /* MYPersonalInformationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYPersonalInformationCell.m; sourceTree = "<group>"; };
 		180B3E5C24ED0A120029704F /* MYPersonalInformation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYPersonalInformation.xib; sourceTree = "<group>"; };
@@ -64,13 +63,18 @@
 		1866B05124EB8255005E65E6 /* RJMessageSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJMessageSegmentView.m; sourceTree = "<group>"; };
 		186A830124DBDB31007A1C95 /* MIBBackButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBBackButton.h; sourceTree = "<group>"; };
 		186A830224DBDB31007A1C95 /* MIBBackButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBBackButton.m; sourceTree = "<group>"; };
-		1897E0D124F63D5600C89209 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		187C909724FC918E00266FF1 /* MYPersonalInformationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPersonalInformationModel.m; sourceTree = "<group>"; };
+		187C909824FC918E00266FF1 /* MIBTaleDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBTaleDataModel.m; sourceTree = "<group>"; };
+		187C909924FC918E00266FF1 /* MYPersonalInformationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPersonalInformationModel.h; sourceTree = "<group>"; };
+		187C909A24FC918E00266FF1 /* MIBTaleDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBTaleDataModel.h; sourceTree = "<group>"; };
+		187C909D24FCA88800266FF1 /* UITextField+RJExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+RJExtension.h"; sourceTree = "<group>"; };
+		187C909E24FCA88800266FF1 /* UITextField+RJExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+RJExtension.m"; sourceTree = "<group>"; };
+		187C90A024FCCB5B00266FF1 /* MIBLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBLoginViewController.h; sourceTree = "<group>"; };
+		187C90A124FCCB5B00266FF1 /* MIBLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBLoginViewController.m; sourceTree = "<group>"; };
 		1897E0D324F63E5800C89209 /* MIBLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBLoginView.h; sourceTree = "<group>"; };
 		1897E0D424F63E5800C89209 /* MIBLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBLoginView.m; sourceTree = "<group>"; };
 		18BA5BCA24E66412004C5AE6 /* MIBTaleTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBTaleTableView.h; sourceTree = "<group>"; };
 		18BA5BCB24E66412004C5AE6 /* MIBTaleTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBTaleTableView.m; sourceTree = "<group>"; };
-		18BA5BCD24E66ACC004C5AE6 /* MIBTaleDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MIBTaleDataModel.h; path = Handle/Controller/MIBTaleDataModel.h; sourceTree = SOURCE_ROOT; };
-		18BA5BCE24E66ACC004C5AE6 /* MIBTaleDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MIBTaleDataModel.m; path = Handle/Controller/MIBTaleDataModel.m; sourceTree = SOURCE_ROOT; };
 		18BA5BD024E66D70004C5AE6 /* MIBTaleNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBTaleNavigationController.h; sourceTree = "<group>"; };
 		18BA5BD124E66D70004C5AE6 /* MIBTaleNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBTaleNavigationController.m; sourceTree = "<group>"; };
 		18BA5BD324E687B8004C5AE6 /* MIBMeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBMeNavigationController.m; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				1866B04724EB7003005E65E6 /* UIBarButtonItem+CLExtension.m */,
 				1866B04924EB720B005E65E6 /* UIView+CLExtension.h */,
 				1866B04A24EB720B005E65E6 /* UIView+CLExtension.m */,
+				187C909D24FCA88800266FF1 /* UITextField+RJExtension.h */,
+				187C909E24FCA88800266FF1 /* UITextField+RJExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -148,10 +154,20 @@
 			path = Message;
 			sourceTree = "<group>";
 		};
+		187C909624FC918E00266FF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				187C909724FC918E00266FF1 /* MYPersonalInformationModel.m */,
+				187C909824FC918E00266FF1 /* MIBTaleDataModel.m */,
+				187C909924FC918E00266FF1 /* MYPersonalInformationModel.h */,
+				187C909A24FC918E00266FF1 /* MIBTaleDataModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1897E0D024F63D1E00C89209 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				1897E0D124F63D5600C89209 /* LoginView.xib */,
 				1897E0D324F63E5800C89209 /* MIBLoginView.h */,
 				1897E0D424F63E5800C89209 /* MIBLoginView.m */,
 			);
@@ -181,7 +197,7 @@
 			children = (
 				1866B04524EB6F62005E65E6 /* Category */,
 				1866B04124EB6846005E65E6 /* Tools */,
-				18E5D89F24CEC5220077DEB9 /* Handle */,
+				18E5D89F24CEC5220077DEB9 /* MVC */,
 				18E0717224C6F208002D563D /* AppDelegate.h */,
 				18E0717324C6F208002D563D /* AppDelegate.m */,
 				18E0717524C6F208002D563D /* SceneDelegate.h */,
@@ -198,26 +214,15 @@
 			path = MonsterBook;
 			sourceTree = "<group>";
 		};
-		18E5D89F24CEC5220077DEB9 /* Handle */ = {
+		18E5D89F24CEC5220077DEB9 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				187C909624FC918E00266FF1 /* Model */,
 				18E5D8A224CEC5450077DEB9 /* Controller */,
-				18E5D8A024CEC5220077DEB9 /* Model */,
 				18E5D8A124CEC5220077DEB9 /* View */,
 			);
-			path = Handle;
+			path = MVC;
 			sourceTree = SOURCE_ROOT;
-		};
-		18E5D8A024CEC5220077DEB9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				18BA5BCD24E66ACC004C5AE6 /* MIBTaleDataModel.h */,
-				18BA5BCE24E66ACC004C5AE6 /* MIBTaleDataModel.m */,
-				180B3E5324ECE0360029704F /* MYPersonalInformationModel.h */,
-				180B3E5424ECE0360029704F /* MYPersonalInformationModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
 		};
 		18E5D8A124CEC5220077DEB9 /* View */ = {
 			isa = PBXGroup;
@@ -251,6 +256,8 @@
 				18BA5BD324E687B8004C5AE6 /* MIBMeNavigationController.m */,
 				18DD426B24EA194800026DC2 /* MIBMeTableViewController.h */,
 				18DD426C24EA194800026DC2 /* MIBMeTableViewController.m */,
+				187C90A024FCCB5B00266FF1 /* MIBLoginViewController.h */,
+				187C90A124FCCB5B00266FF1 /* MIBLoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,7 +353,6 @@
 				180B3E5D24ED0A120029704F /* MYPersonalInformation.xib in Resources */,
 				18E0718224C6F20A002D563D /* LaunchScreen.storyboard in Resources */,
 				18E0717F24C6F20A002D563D /* Assets.xcassets in Resources */,
-				1897E0D224F63D5600C89209 /* LoginView.xib in Resources */,
 				18E0717D24C6F208002D563D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,31 +389,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187C909B24FC918E00266FF1 /* MYPersonalInformationModel.m in Sources */,
 				18BA5BD524E687B8004C5AE6 /* MIBMeNavigationController.m in Sources */,
 				18DD427024EA1D1A00026DC2 /* MIBMessageViewController.m in Sources */,
 				18F6647324D29F1600C48892 /* MIBHomeNavigationController.m in Sources */,
+				187C909C24FC918E00266FF1 /* MIBTaleDataModel.m in Sources */,
 				18DD426D24EA194800026DC2 /* MIBMeTableViewController.m in Sources */,
 				18E5D8A524CEC5450077DEB9 /* MIBTabBarItem.m in Sources */,
-				18BA5BCF24E66ACC004C5AE6 /* MIBTaleDataModel.m in Sources */,
 				1866B04824EB7003005E65E6 /* UIBarButtonItem+CLExtension.m in Sources */,
 				18E0717A24C6F208002D563D /* ViewController.m in Sources */,
 				1866B05224EB8255005E65E6 /* RJMessageSegmentView.m in Sources */,
 				18E0717424C6F208002D563D /* AppDelegate.m in Sources */,
 				18BA5BD224E66D70004C5AE6 /* MIBTaleNavigationController.m in Sources */,
 				1858F7C924D1728100131476 /* MIBHomeViewController.m in Sources */,
-				180B3E5524ECE0360029704F /* MYPersonalInformationModel.m in Sources */,
 				18E0718524C6F20A002D563D /* main.m in Sources */,
 				1866B04424EB689E005E65E6 /* MIBViewTools.m in Sources */,
 				1897E0D524F63E5800C89209 /* MIBLoginView.m in Sources */,
 				18BA5BCC24E66412004C5AE6 /* MIBTaleTableView.m in Sources */,
 				1866B04F24EB7DA0005E65E6 /* MIBMessageTableVC.m in Sources */,
 				180B3E5B24ED02D10029704F /* MYPersonalInformationCell.m in Sources */,
+				187C909F24FCA88800266FF1 /* UITextField+RJExtension.m in Sources */,
 				1858F7C624D1656000131476 /* MIBTabbarController.m in Sources */,
 				1866B04B24EB720B005E65E6 /* UIView+CLExtension.m in Sources */,
 				18DD427324EA1D9300026DC2 /* MIBMessageNavgationController.m in Sources */,
 				18E0717724C6F208002D563D /* SceneDelegate.m in Sources */,
 				18F6647024D2747C00C48892 /* MIBPublishButton.m in Sources */,
 				186A830324DBDB31007A1C95 /* MIBBackButton.m in Sources */,
+				187C90A224FCCB5B00266FF1 /* MIBLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +560,7 @@
 				DEVELOPMENT_TEAM = 2ZQA28SEBC;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MonsterBook/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MonsterBook/Tools/MIBViewTools.h\"";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MonsterBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -574,7 +582,7 @@
 				DEVELOPMENT_TEAM = 2ZQA28SEBC;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MonsterBook/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MonsterBook/Tools/MIBViewTools.h\"";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MonsterBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
