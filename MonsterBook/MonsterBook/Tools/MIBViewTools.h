@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol segmentDelegate<NSObject>
+//点击窗口响应方法
 -(void)doSomethingSegment:(UISegmentedControl *)segment;
 @end
 

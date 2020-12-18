@@ -7,6 +7,7 @@
 //
 
 #import "MIBTabBarItem.h"
+#import "AppDelegate.h"
 #import "MIBPublishButton.h"
 @interface MIBTabBarItem()
 @property(nonatomic,strong)MIBPublishButton *publishButton;
@@ -75,6 +76,18 @@
     NSString *language =  [[NSBundle mainBundle] preferredLocalizations];
     RJLog(@"\nudfLanguageCode：%@ \npfLanguageCode:%@ \nlocaleLanguageCode:%@ \nlanguage:%@",udfLanguageCode,pfLanguageCode,localeLanguageCode,language);
     
+    [self restart];
+    
 }
 
+-(void)restart
+{
+    NSURL *url = [NSURL URLWithString:@"MB://"];
+    bool canOpen = [[UIApplication sharedApplication] canOpenURL:url];
+    if (!canOpen) {
+        return;
+    }
+    [[UIApplication sharedApplication] openURL:url];
+    
+}
 @end

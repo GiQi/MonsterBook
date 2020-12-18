@@ -25,6 +25,7 @@
 		18BA5BCC24E66412004C5AE6 /* MIBTaleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BCB24E66412004C5AE6 /* MIBTaleTableView.m */; };
 		18BA5BD224E66D70004C5AE6 /* MIBTaleNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BD124E66D70004C5AE6 /* MIBTaleNavigationController.m */; };
 		18BA5BD524E687B8004C5AE6 /* MIBMeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA5BD324E687B8004C5AE6 /* MIBMeNavigationController.m */; };
+		18D738FE25304C4C0066857C /* Pods_MonsterBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D738FD25304C4C0066857C /* Pods_MonsterBook.framework */; };
 		18DD426D24EA194800026DC2 /* MIBMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD426C24EA194800026DC2 /* MIBMeTableViewController.m */; };
 		18DD427024EA1D1A00026DC2 /* MIBMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD426F24EA1D1A00026DC2 /* MIBMessageViewController.m */; };
 		18DD427324EA1D9300026DC2 /* MIBMessageNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD427224EA1D9300026DC2 /* MIBMessageNavgationController.m */; };
@@ -38,7 +39,6 @@
 		18E5D8A524CEC5450077DEB9 /* MIBTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E5D8A324CEC5450077DEB9 /* MIBTabBarItem.m */; };
 		18F6647024D2747C00C48892 /* MIBPublishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F6646F24D2747C00C48892 /* MIBPublishButton.m */; };
 		18F6647324D29F1600C48892 /* MIBHomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F6647224D29F1600C48892 /* MIBHomeNavigationController.m */; };
-		B20796B1227D7FA6DC0E1141 /* Pods_MonsterBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497603916F64E94BA3729B56 /* Pods_MonsterBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +79,7 @@
 		18BA5BD124E66D70004C5AE6 /* MIBTaleNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBTaleNavigationController.m; sourceTree = "<group>"; };
 		18BA5BD324E687B8004C5AE6 /* MIBMeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBMeNavigationController.m; sourceTree = "<group>"; };
 		18BA5BD424E687B8004C5AE6 /* MIBMeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBMeNavigationController.h; sourceTree = "<group>"; };
+		18D738FD25304C4C0066857C /* Pods_MonsterBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MonsterBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DD426B24EA194800026DC2 /* MIBMeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBMeTableViewController.h; sourceTree = "<group>"; };
 		18DD426C24EA194800026DC2 /* MIBMeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBMeTableViewController.m; sourceTree = "<group>"; };
 		18DD426E24EA1D1A00026DC2 /* MIBMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBMessageViewController.h; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		18F6646F24D2747C00C48892 /* MIBPublishButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBPublishButton.m; sourceTree = "<group>"; };
 		18F6647124D29F1600C48892 /* MIBHomeNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBHomeNavigationController.h; sourceTree = "<group>"; };
 		18F6647224D29F1600C48892 /* MIBHomeNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBHomeNavigationController.m; sourceTree = "<group>"; };
-		497603916F64E94BA3729B56 /* Pods_MonsterBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MonsterBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87759F0FFAAE766AFE4DF998 /* Pods-MonsterBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsterBook.release.xcconfig"; path = "Target Support Files/Pods-MonsterBook/Pods-MonsterBook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B20796B1227D7FA6DC0E1141 /* Pods_MonsterBook.framework in Frameworks */,
+				18D738FE25304C4C0066857C /* Pods_MonsterBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +278,7 @@
 		2B4AAC43E6FED1CC6B1D3576 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				497603916F64E94BA3729B56 /* Pods_MonsterBook.framework */,
+				18D738FD25304C4C0066857C /* Pods_MonsterBook.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

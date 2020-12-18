@@ -9,6 +9,8 @@
 #import "MIBLoginView.h"
 
 @interface MIBLoginView ()<UITextFieldDelegate>
+@property(nonatomic,strong)UITextField *accountTextField;
+@property(nonatomic,strong)UITextField *passwordTextField;
 
 @end
 
@@ -27,14 +29,11 @@
     
     CGFloat offset = 10;
     CGFloat imgViewX = self.cl_x;
-    CGFloat imgViewH = self.cl_height/4;
+    CGFloat imgViewH = self.cl_height/3;
     CGFloat viewW = self.cl_width;
     
-    CGFloat accountLabW = viewW/4;
     CGFloat accountH = imgViewH/2-offset;
-    
-    CGFloat TextX = accountLabW+offset;
-    CGFloat passwordY = accountH+offset;
+    CGFloat passwordY = accountH+offset*2;
     
     
     UIView *imgView = [[UIView alloc] initWithFrame:CGRectMake(imgViewX, self.cl_y, viewW, imgViewH)];
@@ -55,11 +54,17 @@
 //    labAccount.textAlignment = NSTextAlignmentCenter;
 //    [inputView addSubview:labAccount];
     
-    UITextField *accountText = [[UITextField alloc] initWithFrame:CGRectMake(0, offset, viewW-TextX, accountH)];
-    accountText.placeholder = @"手机号/邮箱/用户名";
-    accountText.delegate = self;
-    accountText.leftView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"my"]];
-    [inputView addSubview:accountText];
+    _accountTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, offset, viewW, accountH)];
+    _accountTextField.placeholder = @"手机号/邮箱/用户名";
+    _accountTextField.delegate = self;
+    _accountTextField.leftViewMode = UITextFieldViewModeAlways;
+    _accountTextField.leftView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"my"]];
+    _accountTextField.tag = 1000;
+    _accountTextField.borderStyle = UITextBorderStyleRoundedRect;
+    _accountTextField.layer.cornerRadius = 4;
+    _accountTextField.layer.borderWidth = 1;
+    _accountTextField.layer.borderColor = [UIColor systemPinkColor].CGColor;
+    [inputView addSubview:_accountTextField];
     
     //密码
 //    UILabel *labPassword = [[UILabel alloc] initWithFrame:CGRectMake(0, passwordY, accountLabW, accountH)];
@@ -69,10 +74,13 @@
 //    labPassword.textAlignment = NSTextAlignmentCenter;
 //    [inputView addSubview:labPassword];
     
-    UITextField *passwordText = [[UITextField alloc] initWithFrame:CGRectMake(0, passwordY, viewW-TextX, accountH)];
-    passwordText.secureTextEntry = YES;
-    passwordText.delegate = self;
-    [inputView addSubview:passwordText];
+    _passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, passwordY, viewW, accountH)];
+    _passwordTextField.tag = 1001;
+    _passwordTextField.secureTextEntry = YES;
+    _passwordTextField.delegate = self;
+    _passwordTextField.leftViewMode = UITextFieldViewModeAlways;
+    _passwordTextField.borderStyle = UITextBorderStyleRoundedRect;
+    [inputView addSubview:_passwordTextField];
     
     [self addSubview:inputView];
     [self addSubview:imgView];
@@ -86,7 +94,13 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+//    if (textField.tag == 1000) {
+//        [_passwordTextField becomeFirstResponder];
+//    }else{
+//        [_passwordTextField resignFirstResponder];
+//    }
     [textField resignFirstResponder];
+    
     return YES;
 }
 @end
