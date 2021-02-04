@@ -36,8 +36,9 @@
       NSInteger index = segment.selectedSegmentIndex;
       switch (index) {
           case 0:
-          {MIBLoginView *loginView = [[MIBLoginView alloc] initWithFrame:CGRectMake(0, 0, self.view.cl_width-60, self.view.cl_height/2)];
-              loginView.center = self.view.center;
+          {MIBLoginView *loginView = [[MIBLoginView alloc] initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height+self.navigationController.navigationBar.frame.origin.y, self.view.cl_width, self.view.cl_height-self.navigationController.navigationBar.frame.size.height)];
+              loginView.backgroundColor = RJColorA(150, 150, 150, 0.5);
+//              loginView.center = self.view.center;
                   [self.view addSubview:loginView];}
               break;
           case 1:
